@@ -1,0 +1,542 @@
+**** W IS NetworkinG****
+Networking is to connect things to gather is known as N(_The Devices connected)..
+****What is Internet **** Was created by (Tim berners--1989) of creation WWW
+:>So internet is madeup of small netwoks all joined togather: small called  Private Netwokrs. where these small networks connected to gather called public networks 
+
+**An IP Address**? lets understand the IP ?
+ {192.168.1.1}
+ octet#1  octet#2   Octet#3  Octet#4
+ 1 9 2   . 1 6 8   . 1       .1
+ 0-255     0-255    0-255    0-255
+ 
+ ip can change device to device but can't be active simunltaneously more than once within the network
+ ** ip follow set of standards known as protocols which are (Backbone of networking) nd force many devices to communiCATE in same language 
+ ** public & private networks 
+ Public is used to identify the device on the internet .. 
+ private is used to identify the device amongst other devices
+ private ip address help to communicate with each other & public ip addresses are given your internet service provider(ISO) at monthly fee like storm fiber 
+**MAC Address** is a hexadecimal number (twelve-character) 
+ who build the device           unique address of  (a4:c3:f0:85:ac2d)
+a4:c3:f0              :         85:ac2d
+{They can be faked called spoofed }
+
+-*-**-*Spoofing *-*-*-*-(look)
+we are in hotel okay now alice has access to wifi but u don't so what u will do is spoof MAC address of Alice(copy his MAC address & change urs same as his) & send request boom ur also using wifi device is thinking ur also alice  
+
+*-*-*-*-PING(ICMP) determines the performance of connection b/w connected devices.
+
+
+*****DNS(Domain name system)******
+*-*--*Root Domain '.'
+*-*-*-Top level domain 'com,edu.pk'
+-*-*-*Second level domain-*-*-* tryhackme ,nasa 
+**DNS record Types**
+
+1) A Record
+
+2) AAAA Record 
+
+3) CNAME Record 
+
+4) MX record 
+
+5) TXT record 
+
+***What happens when we Request DNS 
+
+UDEMY David Bombal Course Networking CCNA 
+ 
+**TCP/IP****
+ IP ensures that the data packet reaches its destination, 
+ TCP controls the data transfer and ensures the connection between data stream and application.
+
+HTB
+OSI model 
+layers 
+
+  1  IPv4 / IPv6
+  2  IPsec
+  3  ICMP
+  4  IGMP
+  5  RIP
+  6  OSPF
+***IP Addresses***
+
+	IPv4 / IPv6 - describes the unique postal address and district of the receiver's building.
+	MAC - describes the exact floor and apartment of the receiver.
+    
+	IPV4 Struture
+	IP network blocks are devided into classes A-to-E
+
+	Subnetting
+	
+	MAC Addresses(6 Octects)
+	ARP (Address Resolution Protocol)
+	ARP Request
+	ARP Reply
+	ARP spoofing(Its vulnerable to attack) tools (tools like Ettercap or Cain & Abel )
+	We can use ARP poisoning to perform various activities, such as stealing sensitive information, redirecting traffic,
+	or launching MITM attacks. 
+
+	****IPv6/\Addresses***
+	IPv6 address is 128 bit long.
+
+///\\\\Topic***********Protocols&Terminology*************
+******Networking Key Terminology*******
+in this if u have time check this okay 
+*****Common Protocols ******
+****TCP (Transmission Control Protocol) ****
+TCP is a connection-oriented protocol that establishes a virtual connection between two devices before transmitting data by using a Three-Way-Handshake.
+This connection is maintained until the data transfer is complete, 
+and the devices can continue to send data back and forth as long as the connection is active
+1)Telnet 	Telnet 	23 	Remote login service
+2)Secure Shell 	SSH 	22 	Secure remote login service
+3)Simple Network Management Protocol 	SNMP 	161-162 	Manage network devices
+4)Hyper Text Transfer Protocol 	HTTP 	80 	Used to transfer webpages
+5)Hyper Text Transfer Protocol Secure 	HTTPS 	443 	Used to transfer secure webpages
+6)Domain Name System 	DNS 	53 	Lookup domain names
+---> There is all list plz check out 
+*****UDP(User Datagram Protocol) ****
+On the other hand, UDP is a connectionless protocol, which means it does not establish a virtual connection before transmitting data. Instead, 
+it sends the data packets to the destination without checking to see if they were received. 
+--->List check IN HTB
+*****ICMP(INternet Conrol MEssage Protocol)****
+is a protocol used by devices to communicate with each other on the Internet for various purposes, including error reporting
+---> ICMP Requests
+--->ICMP Messages
+For example, if a device tries to send a packet to another device and the packet cannot be delivered, the device can use ICMP to send an error message back to the sender. 
+ICMP has two different versions:
+ICMPv4
+ICMPv6
+TTL(Time-to-Live)
+******VoIP(Voice Over Internet Protocol)******
+is a method of transmitting voice and multimedia communications
+***Information Disclosure
+However, SIP allows us to enumerate existing users for potential attacks. This can be done for various purposes, such as determining a user's availability, 
+finding out information about the user's capabilities or services, or performing brute-force attacks on user accounts later on
+
+
+**** Wireless Networks *****
+
+******wifi Connection
+*** WEP Challenge-Response Handshake ****
+The challenge-response handshake is a process to establish a secure connection between a WAP and a client device in a wireless network that uses the WEP security protocol
+--->CRC(Cyclic Redundancy Check (CRC) is an error-detection mechanism used in the WEP protocol to protect against data corruption in wireless communications)
+****Security Features ****
+wifi has some security features
+*Encyption 
+*Access Control 
+*Firewall
+-->Encryption
+algorithms in WiFi networks are Wired Equivalent Privacy (WEP), WiFi Protected Access 2 (WPA2),
+and WiFi Protected Access 3 (WPA3).
+--->Access Control
+***Encryption Protocols ***
+Wired Equivalent Privacy (WEP) and WiFi Protected Access (WPA) are encryption protocols that secure data transmitted over a WiFi network. WPA can use different encryption algorithms,
+including Advanced Encryption Standard (AES)
+****WPA***
+***Authentication Protocols ***
+Lightweight Extensible Authentication Protocol (LEAP) and 
+Protected Extensible Authentication Protocol (PEAP) are authentication protocols used to secure wireless networks to provide a secure method for authenticating devices
+-->LEAP uses a shared key for authentication, which means that the same key is used for encryption and authentication.
+
+***TACACS+****
+Several encryption methods may be used to encrypt the authentication request, such as SSL/TLS or IPSec. The specific encryption method used may depend on the configuration of the TACACS+ server and the capabilities of the WAP.
+***Disassociation Attack 
+A Disassociation Attack is a type of all wireless network attack that aims to disrupt the communication between a WAP and its clients by sending disassociation frames to one or more clients.
+***Wireless Hardening 
+There are many different ways to protect wireless networks
+
+    Disabling broadcasting
+    WiFi Protected Access
+    MAC filtering
+    Deploying EAP-TLS
+
+Disabling Broadcasting 
+Disabling the broadcasting of the SSID is a security measure that can help harden a WAP by making it more difficult to discover and connect to the network. 
+***WPA***
+Two versions 
+1) WPA-Personal
+2) WPA-Enterprise
+
+***MAC Filtering ***
+MAC filtering is a security measure that allows a WAP to accept or reject connections from specific devices based on their MAC addresses. 
+****Deploying EAP-TLS
+
+EAP-TLS is a security protocol used to authenticate and encrypt wireless communications. 
+It uses digital certificates and PKI to verify the identity of clients and establish secure connections. 
+
+
+*******VPN (Virtual Private Networks)********
+The VPN client and server use these ports to establish and maintain the VPN connection. At the TCP/IP layer, 
+a VPN connection typically uses the Encapsulating Security Payload (ESP) protocol to encrypt and authenticate the VPN traffic.
+This allows the VPN client and server to exchange data over the public internet securely.
+
+**IPsec***
+Internet Protocol Security (IPsec) is a network security protocol that provides encryption and authentication for internet communications.
+-->IPsec two modes
+**Transport Mode 	In this mode, IPsec encrypts and authenticates the data payload of each IP packet but does not encrypt the IP header. This is typically used to secure end-to-end communication between two hosts.
+**   Tunnel Mode 	With this mode, IPsec encrypts and authenticates the entire IP packet, including the IP header. This is typically used to create a VPN tunnel between two networks.
+
+
+----------------------------------
+Internet Protocol (IP) 	UDP/50-51 	This is the primary protocol that provides the foundation for all internet communication. It is used to route packets of data between the VPN client and the VPN server.
+Internet Key Exchange (IKE) 	UDP/500 	IKE is a protocol that is used to establish and maintain secure communication between the VPN client and the VPN server. It is based on the Diffie-Hellman key exchange algorithm, and it is used to negotiate and establish shared secret keys that can be used to encrypt and decrypt the VPN traffic.
+Encapsulating Security Payload (ESP) 	UDP/4500 	ESP is also a protocol that provides encryption and authentication for IP datagrams. It is used to encrypt the VPN traffic between the VPN client and the VPN server, using the keys that were negotiated with IKE.
+
+These protocols are necessary for facilitating IPsec VPN traffic because they provide the security and encryption that are required for secure communication over the public internet. Without these protocols, the VPN traffic would be vulnerable to interception and tampering
+
+*** PPTP ***
+***************Vendor Specific Infomation ***********
+CLI cisco 
+*****VLANs****
+A VLAN is a logical grouping of network endpoints connected to defined ports on a switch, allowing the segmentation of networks by creating logical broadcast domains that can span multiple physical LAN segments
+--->Benefits of vlans DYS(Do Your Self Yasir) okay
+***VLAN Memberships****
+****Access And Trunk Ports****
+****Vlan Identification****
+****ISL(Inter-Switch Link)***
+****IEEE 802.1Q***
+****VALN-Capable NICs**
+***Assigning NICs a VLAN in Linux ***
+***Analyzing VLAN Tagged Traffic***
+**Security Implications & VLAN Attacks**
+***VALN Hopping***
+We can use tools such as "Yersinia" to perform VLAN hopping attacks:"
+***Double-tagging VLAN Hopping **
+Scapy allows carrying out the double-tagging VLAN hopping attack, in addition to Yersinia:
+***VXLAN***
+**Cisco Discovery Protocol**
+
+*****************Connection--Establishment**********
+***Key*Exchange Mechanisms****
+--->What is a cryptographic key?
+In cryptography, a key is a string of characters used within an encryption algorithm for altering data so that it appears random. Like a physical key, 
+it locks (encrypts) data so that only someone with the right key can unlock (decrypt) it.
+
+---->Diffie-Hellman
+What is Diffie-Hellman key Exchange?
+One of the main limitations of the Diffie-Hellman key exchange is that it is vulnerable to MITM attacks
+*******What TLS (Transport layer Security)?
+Transport Layer Security, or TLS, is a widely adopted security protocol designed to facilitate privacy and data security for communications over the Internet. 
+A primary use case of TLS is encrypting the communication between web applications and servers, such as web browsers loading a website. TLS can also be used to encrypt other communications such as email, messaging, and voice over IP (VoIP). 
+In this YAsir we will focus on the role of TLS in web application security.
+
+---------->RSA(Rivest-Shamir-adleman)<-------
+-------->ECDH<-------
+"Elliptic curve Diffie-Hellman"(ECDH) is a variant of Diffie-Hellman key exchange that uses elliptic curve cryptography to generate the shared secret key.
+*--------->ECDSA<---------
+The Elliptic Curve Digital Signature Algorithm (ECDSA) uses elliptic curve cryptography to generate digital signatures that can authenticate the parties involved in the key exchange.
+*********Internet Key Exchange)IKE<---------
+ is a protocol used to establish and maintain secure communication sessions, such as those used in VPNs. 
+It uses a combination of the Diffie-Hellman key exchange algorithm and other cryptographic techniques to securely exchange keys and negotiate security parameters.
+***1) Main Mode IKE
+The main mode is the default mode for IKE and is generally considered more secure than the aggressive mode. The key exchange process is performed in three phases in the main mode, each exchanging a different set of security parameters and keys. 
+This allows for greater flexibility and security but can also result in slower performance compared to aggressive mode
+
+****2)Aggressive Mode
+
+Aggressive mode is an alternative mode for IKE that provides faster performance by reducing the number of round trips and message exchanges required for key exchange. In this mode, the key exchange process is performed in two phases, 
+with all security parameters and keys being exchanged in the first phase.
+However, this can provide faster performance but may also reduce the security of the IKE session compared to the main mode since the aggressive mode does not provide identity protection.
+
+--------->Pre-Shared keys(PSK)
+
+********Authentication Protocols*********
+Many different authentication protocols are used in networking to verify the identity of devices and users. 
+Those protocols are essential because they provide a secure and standardized way of verifying the identity of users, devices, and other entities in a network
+
+
+~Protocol~                               <Description
+Kerberos 	Key Distribution Center (KDC) based authentication protocol that uses tickets in domain environments.
+~
+SRP 	This is a password-based authentication protocol that uses cryptography to protect against eavesdropping and man-in-the-middle attacks.
+~
+SSL 	A cryptographic protocol used for secure communication over a computer network.
+~
+TLS 	TLS is a cryptographic protocol that provides communication security over the internet. It is the successor to SSL.
+~
+OAuth 	An open standard for authorization that allows users to grant third-party access to their web resources without sharing their passwords.
+~
+OpenID 	OpenID is a decentralized authentication protocol that allows users to use a single identity to sign in to multiple websites.
+~
+SAML 	Security Assertion Markup Language is an XML-based standard for securely exchanging authentication and authorization data between parties.
+~
+2FA 	An authentication method that uses a combination of two different factors to verify a user's identity.
+~
+FIDO 	The Fast IDentity Online Alliance is a consortium of companies working to develop open standards for strong authentication.
+~
+PKI 	PKI is a system for securely exchanging information based on the use of public and private keys for encryption and digital signatures.
+~
+SSO 	An authentication method that allows a user to use a single set of credentials to access multiple applications.
+~
+MFA 	MFA is an authentication method that uses multiple factors, such as something the user knows (a password), something the user has (a phone), or something the user is (biometric data), to verify their identity.
+~
+PAP 	A simple authentication protocol that sends a user's password in clear text over the network.
+~
+CHAP 	An authentication protocol that uses a three-way handshake to verify a user's identity.
+~
+EAP 	A framework for supporting multiple authentication methods, allowing for the use of various technologies to verify a user's identity.
+~
+SSH 	This is a network protocol for secure communication between a client and a server. We can use it for remote command-line access and remote command execution, as well as for secure file transfer. SSH uses encryption to protect against eavesdropping and other attacks and can also be used for authentication.
+~
+HTTPS 	This is a secure version of the HTTP protocol used for communication on the internet. HTTPS uses SSL/TLS to encrypt communication and provide authentication, ensuring that third parties cannot intercept and read the transmitted data. It is widely used for secure communication over the internet, particularly for web browsing.
+~
+LEAP 	LEAP is a wireless authentication protocol developed by Cisco. It uses EAP to provide mutual authentication between a wireless client and a server and uses the RC4 encryption algorithm to encrypt communication between the two. Unfortunately, LEAP is vulnerable to dictionary attacks and other security vulnerabilities and has been largely replaced by more secure protocols such as EAP-TLS and PEAP.
+~
+PEAP 	PEAP on the other hand is a secure tunneling protocol used for wireless and wired networks. It is based on EAP and uses TLS to encrypt communication between a client and a server. PEAP uses a server-side certificate to authenticate the server and can also be used to authenticate the client using various methods, such as passwords, certificates,
+or biometric data. PEAP is widely used in enterprise networks for secure authentication.
+~
+
+
+***********TCP/UDP Connections********
+****IP***
+--->IP Record-Route Field
+ping -c 1 -R (IP)
+
+***Blind Spoofing *****
+Blind spoofing, is a method of data manipulation attack in which an attacker sends false information on a network without seeing the actual responses sent back by the target devices. 
+
+***********Cryptography******
+****Symatric Encryption****
+One Same Key used to encrypt data & Decrypt Data 
+****Asymatric Encryption***
+Private & Public key Used
+
+
+
+
+
+
+Kunal kushwaha (He Has Focused On OSI models in his 4 Hours video of Networking BootCamp)
+How computers r connected (Topologies)
+1 Bus  | by one wire
+2 Ring | Ring shape
+3 Star | one controling device 
+3 tree | combination of (BUS+Star)
+4 Mesh | ever single computer connected to every single computer
+***1 Hour completed ****
+-----> Structure Of Network (OSI MOdel)<-----
+How the internet works OSI(Open Systems interconnection ) Models
+----> 7 layers in OSI Models (Its important for the Interview okay)
+1) Application layer
+2) Presentation layer
+3) Session Layer()
+4) Transport Layer(TCP,UDP)
+5) Network Layer(Router function of NL is logical addressing )
+6) Data Link Layer(Allows u to directly communicate with computers)
+7) Physical Layer()
+-----> Application layer <-----
+impemented in Software consist of softwares
+*Users interten
+*Whats app ,Browser
+*Where Devices
+* Protocol
+*Client-Server Architacture
+1) Client ---Rquest------->   Server(Data Center)
+   Client <--Response------   Server
+
+2) P2P (Pear to Pear) computer lab 
+
+~-->Application layer has some protocols 
+
+***Another Model : TCP/IP Model****
+----> its similiar to the OSI model but here layer are decread to 5 ig 
+1) Application
+2) Transport
+3) Network
+4) Data Link
+5) Physical
+~-----> Protocol <----~
+Web Protocol
+TCP/IP
+*http
+*DHCP
+*ftp
+*smtp & IMAC
+*SSH
+*VNC
+*TELNET(Is a terminal Emulation That enables user to Connect to remote Host device tell net client)
+(Port:23)
+*UDP(Stadeless Connection)
+Thread(Is a litter version of Process )(Threat is doing only one Single job0)
+*Sockets(Interface b/w Processes & Internet )
+*Ports:(Ip addresses tells which device we are working with)&(Posts tells us which application we are working with )
+**Ephemeral Ports: 
+
+----> HTTP <----
+	Client ---Rquest------->   Server(Data Center)
+	Client <--Response------   Server
+\/ Application layer <--HTTP Useses TCP --> Transport layer
+ITS Stateless protocol
+*** Lets talk about Methods get,post etc ***
+-->1) Get 
+-->2) Post 
+-->3) Put 
+-->4) Delete
+TIME to Resume(2.02.08/4.06.55) 
+-->Status code: 100 --Information like this
+		200 --Sucess
+		300 --Redirecting
+		400 --client error
+		500 -- server error
+****Cookies***
+Def:    Unique String 
+	Sored in browser
+***Third Party cookies ***
+Def: cookies that r set for the URLs that u don't visit 
+
+
+*****How Email Works***
+SMTP,pop3
+-->How data is going to be transfered email data :
+sender-->sender SMTP server --> Reciver SMTP -->Reciver
+
+**POP(Post Office Protocol)port: 110
+*IMAP
+****
+
+**DNS***
+
+   Mail       .Google                   .com
+Sub-domain	Second-level-Domain	Top Level
+
+****Root DNS Servers ***	
+.io               , .org           .com
+Student.io        Comclass.org     yasir.com
+
+--->Who is managing all the servers 
+companies like icans73
+
+
+***********2) TransPort layer**********
+---> What is difrence b/w Transport layer /Network layer <---
+	Using whtsapp
+
+u------------>friend
+~as u can see line which is connecting me my friend is network 
+~basically transport do is it takes information from the network to the application 
+~so network layer going to do is takecare of delevering message from 1 comp to another computer so when the message is recived on
+ this computer which application do i send this message obviously transport ...
+~>Transport layer directly workis within same devices
+transport layer takes care of also trafic conjection control
+
+***TCP/UDP***
+Data travels in "Packets" ---> Now Transport Layer will Attatch port number (where its coming from where its being send)
+*conjection(Trafic) control algorithm built in TCP.
+--->some time some data packet are lost who cares for not losing data packets
+**Checksums: they take care of packet every data would have checksum attached 
+-->How would i know my data packet are recived or not ?
+**Timmers: when u sent "packet" start time when recived time end if not recived timer expire not sent faild
+--> i send "packet 1" strat , recived end , again i sent "Packet 2" start expire he didn't recived here what i did 
+i created another "packet 2 " and send it but there is duplicate **how do u solve this problem
+
+**sequence number by usning sequence number solve this problem 
+video end (2:54:10/4:06:55) okay 
+**sequence number by usning sequence number solve this problem 
+**UDP/User Datagram Protocol
+*data may or maynot be delaverd 
+*data may not in order 
+*connection less protocol
+*UDP uses uses cheksums 
+UDP Packet: 
+Source port no : 2bytes
+Destination port no:2bytes
+length of data gram : 2byte 
+checksum:2byte
+*Total size =2^16-8=65,336 byte 
+udp is faster usen live calls live streams 
+DNS uses UDP 
+Command to check data packets = tcpdump -c 5 
+
+*******TCP/Transmition control Protocol*****
+Asked in interviews explain TCP?
+---> used in HTTP
+*Transport layer protocol
+
+*Application layer sends lots of raw data ->tcp segments this data -->devide in chunks add haders it may also collect the data from network layer .--> network layer brakes it into more chunks 
+*Conjestion control 
+*takes care of 
+when does'nt arive , maintains the order of data 
+***Features: Connection orented 
+	*Error control 
+	*conjection control 
+	*full Duplex 
+-----> How connection happens ? <-----
+*****asked in interview :***Three way hand shake ex for three way 
+u aasked ur frind i wanna establish  a connection ur frined yea cool u established connection 
+	
+syn (syncronization flag)= new connection is going to start 
+client:-----------syn-----------> server
+	---------seq no ------->  server seq no(random number)		
+	---------AKC----------->  server akc(aknolegement flag )
+
+*********Network Layer *********
+In tronsport payer data travels in Segments
+In Network Layer data Travels in Packets
+in Data link layer --> data travels in frames 
+
+here we works with the routers 
+Hop-By-Hop 
+Control Plane controls the where when are thins going 
+Static routing
+Dynamic Routing
+
+****IP/Internet prtocol *********
+IPv4: 32 bit 4 words 
+
+IPv6: 128 bit 6 words
+
+|192.168.2 |     |.30|
+Network address   Device Address
+Subnet ID 	  Host ID 	
+all the devices on the same network start with 192.stuff thsese are known as "Subnets"
+
+---> Internet socity created classes 
+Class A : 0.0.0.0
+Class B : 128.0.0.
+Class C : 192.0.0.
+Class D : 224.0.0.
+Class E : 240.0.0.
+
+Reserved addresses :
+127.|0.0.0| /8 means first 8 bits are reserved highlited ones could be any thing 
+     -----
+Ex:local host  127.0.0.1 
+looop back addresses 
+
+------->Lets talk abt packets how data travels Through?
+packets headers is of 27 bytes it contains 
+ 	IPV, Length, identification,flag,protocols,checksum,addresses,TTL,etc
+
+--------->* IPv6 ?
+IPv4 2^32 ~ 4.3 billion
+
+IPv6 2^32*4 = 2^128 ~ 3.4*10^38
+
+*Cons:  Not Backword Compatible 
+	*Isp would habe to shift lot of hardware work
+	*How its represent 
+	a:a:a:a:a:a:a:a
+	Hexadecimal : 16 bit
+
+---->One more thing interact with packets Known as "Middle boxes"
+  1) Firewall -->global Internet -->Your trusted network 
+Fillter out IP Packets based on various rules
+-->Adddresses
+-->Modity Packets 
+-->Ports Nos
+-->Flages 
+-->Protocols 
+*Typpes of firewalls
+Stateless   | Stateful Firewalls(More Efficeints)
+
+2)NAT(Network address Translation )
+
+------> Data Link Layer
+The data packets we recive from networks layer The Data link layer is responsible to send them to over physical layer
+
+**When new devie ----> Comes it Connects to the |DHCP(Dynamic Host Config Protocol)|Server ---> Asks for the ip it has pool of ip addresses and ---> It gonna assign one ip address to the device 
+
+
+---->Many Devices connested at LAN network : They Communicate to each other Using "Data LInk Layer Address"--> Known as MAC address     
